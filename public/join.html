@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Join Zoom Meeting</title>
+
+  <!-- Zoom CSS -->
+  <link rel="stylesheet" href="https://source.zoom.us/3.13.1/css/bootstrap.css" />
+  <link rel="stylesheet" href="https://source.zoom.us/3.13.1/css/react-select.css" />
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Zoom Web SDK Dependencies -->
+  <script src="https://source.zoom.us/3.13.1/lib/vendor/react.min.js"></script>
+  <script src="https://source.zoom.us/3.13.1/lib/vendor/react-dom.min.js"></script>
+  <script src="https://source.zoom.us/3.13.1/lib/vendor/redux.min.js"></script>
+  <script src="https://source.zoom.us/3.13.1/lib/vendor/redux-thunk.min.js"></script>
+  <script src="https://source.zoom.us/3.13.1/lib/vendor/lodash.min.js"></script>
+  <script src="https://source.zoom.us/zoom-meeting-3.13.1.min.js"></script>
+
+  <!-- Your App JS -->
+  <script type="module" src="./main.js"></script>
+</head>
+<body>
+  <!-- Required Zoom UI Containers -->
+  <div id="zmmtg-root"></div>
+  <div id="aria-notify-area"></div>
+
+  <!-- UI -->
+  <h1>Join Zoom Meeting</h1>
+
+  <label for="username">
+    Your Name:
+    <input id="username" type="text" placeholder="John Doe" />
+  </label><br><br>
+
+  <label for="meetingNumber">
+    Meeting Number:
+    <input id="meetingNumber" type="text" placeholder="123456789" />
+  </label><br><br>
+
+  <label for="pwd">
+    Password:
+    <input id="pwd" type="text" placeholder="123456" />
+  </label><br><br>
+
+  <label for="roleSelect">
+    Join as:
+    <select id="roleSelect">
+      <option value="0">Participant</option>
+      <option value="1">Host</option>
+    </select>
+  </label><br><br>
+
+  <button id="startMeeting">Join Meeting</button>
+</body>
+</html>

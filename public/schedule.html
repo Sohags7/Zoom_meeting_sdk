@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Schedule Meeting</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container fade-in">
+    <h2>Schedule a Zoom Meeting</h2>
+    <form id="scheduleForm"  window.location.href='confirmation.html';">
+      <input type="text" id="hostName" placeholder="Host Name" required>
+      <input type="text" id="meetingTopic" placeholder="Topic" value="" required>
+      <input type="datetime-local" id="meetingTime" value="" required>
+      <input type="number" id="meetingDuration"  placeholder="Duration (minutes)" value="30" required>
+      <textarea  id="meetingDesc" placeholder="Description"></textarea>
+      <button type="submit">Create Meeting</button>
+    </form>
+  </div>
+  <div  id="meeting-info" class="container fade-in" style="display: none;">
+    <h2>Meeting Created!</h2>
+    <p id="meeting-id"></p>
+    <p id="meeting-url"></p>
+    <p id="meeting-passcode"></p>
+    <p>Share these details with your participants.</p>
+    <button onclick="window.location.href='index.html'">Back to Home</button>
+  </div>
+
+  <script src="schedule.js"></script>
+</body>
+</html>
